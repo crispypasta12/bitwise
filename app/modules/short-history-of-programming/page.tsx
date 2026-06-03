@@ -698,9 +698,9 @@ Where embedded systems fit:`}</code></pre>
               <Link href="/modules/what-is-this-course-about" className="btn btn-ghost">
                 Previous: Module 0
               </Link>
-              <button className="btn btn-disabled" disabled>
+              <Link href="/modules/how-a-computer-actually-works" className="btn btn-primary">
                 Next: Module 2
-              </button>
+              </Link>
             </div>
           </div>
         </section>

@@ -32,8 +32,9 @@ const MODULES = [
     tier: "Foundations",
     title: "How a Computer Actually Works",
     desc: "The CPU, memory, and buses beneath the abstraction — what really happens when an instruction executes.",
-    time: "40 min",
+    time: "30-40 min",
     status: "published",
+    href: "/modules/how-a-computer-actually-works",
   },
   {
     num: "03",
