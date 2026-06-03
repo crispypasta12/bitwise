@@ -976,7 +976,7 @@ Else:
               <div className="section-tag mono">
                 <span className="cmt">{"// "}</span>next_lesson
               </div>
-              <h2>Next: Beginner Data Structures</h2>
+              <h2>Next: Data Structures at a Beginner Level</h2>
               <p>
                 Next, the learner will see how programs organize multiple pieces of data using
                 lists, arrays, strings, dictionaries/maps, stacks, queues, and simple structured
@@ -995,9 +995,9 @@ Else:
               <Link href="/modules/from-source-code-to-running-program" className="btn btn-ghost">
                 Previous: Module 3
               </Link>
-              <button className="btn btn-disabled" disabled>
+              <Link href="/modules/beginner-data-structures" className="btn btn-primary">
                 Next: Module 5
-              </button>
+              </Link>
             </div>
           </div>
         </section>

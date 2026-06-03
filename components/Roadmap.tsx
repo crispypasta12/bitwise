@@ -19,14 +19,14 @@ const tiers = [
   },
   {
     num: "02",
-    status: "prog",
-    statusLabel: "In progress",
+    status: "live",
+    statusLabel: "Live",
     name: "Programming Basics",
     desc: "Universal concepts, beginner data structures, and the ideas that transfer across languages.",
-    mods: ["done", "soon"],
-    modLabel: "1 / 2",
+    mods: ["done", "done"],
+    modLabel: "2 / 2",
     active: true,
-    current: true,
+    current: false,
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M8 6 3 12l5 6"/>

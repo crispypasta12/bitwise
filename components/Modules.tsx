@@ -63,10 +63,11 @@ const MODULES = [
     file: "beginner_data_structures",
     ext: ".md",
     tier: "Programming Basics",
-    title: "Beginner Data Structures",
+    title: "Data Structures at a Beginner Level",
     desc: "Lists, arrays, strings, dictionaries/maps, stacks, queues, and simple structured data.",
     time: "35-45 min",
-    status: "soon",
+    status: "published",
+    href: "/modules/beginner-data-structures",
   },
   {
     num: "11",
@@ -104,7 +105,7 @@ const COMPILE_LINES = [
   { html: "&nbsp;&nbsp;module 03 · source_to_running_program", state: "ok" },
   { html: '<span style="color:var(--accent)">→</span> tier 02 · programming basics', state: "ok" },
   { html: "&nbsp;&nbsp;module 04 · universal_programming_concepts", state: "ok" },
-  { html: "&nbsp;&nbsp;module 05 · beginner_data_structures", state: "pend" },
+  { html: "&nbsp;&nbsp;module 05 · beginner_data_structures", state: "ok" },
   { html: '<span style="color:var(--accent)">→</span> tier 04 · systems &amp; embedded', state: "pend" },
 ];
 
@@ -148,7 +149,7 @@ function CompileBar() {
     if (!box || !log || !seg || !pct) return;
 
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const target = Math.round((4 / 8) * 100);
+    const target = Math.round((5 / 8) * 100);
     const timers: ReturnType<typeof setTimeout>[] = [];
     let live = true;
 
