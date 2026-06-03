@@ -744,9 +744,9 @@ export default function ModuleTwoPage() {
               <Link href="/modules/short-history-of-programming" className="btn btn-ghost">
                 Previous: Module 1
               </Link>
-              <button className="btn btn-disabled" disabled>
+              <Link href="/modules/from-source-code-to-running-program" className="btn btn-primary">
                 Next: Module 3
-              </button>
+              </Link>
             </div>
           </div>
         </section>
