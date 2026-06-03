@@ -2,8 +2,17 @@
 
 import { useEffect, useState } from "react";
 
-export default function Nav() {
+type NavProps = {
+  brandHref?: string;
+  sectionPrefix?: string;
+};
+
+export default function Nav({
+  brandHref = "#top",
+  sectionPrefix = "",
+}: NavProps) {
   const [scrolled, setScrolled] = useState(false);
+  const sectionHref = (id: string) => `${sectionPrefix}#${id}`;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -15,7 +24,7 @@ export default function Nav() {
   return (
     <header className={`nav${scrolled ? " scrolled" : ""}`} id="nav">
       <div className="nav-inner">
-        <a className="brand" href="#top">
+        <a className="brand" href={brandHref}>
           <span className="logo mono">&amp;</span>
           <span>
             <b>bit</b>
@@ -23,10 +32,10 @@ export default function Nav() {
           </span>
         </a>
         <nav className="nav-links">
-          <a href="#overview">overview</a>
-          <a href="#roadmap">roadmap</a>
-          <a href="#modules">modules</a>
-          <a href="#modules" className="nav-cta">
+          <a href={sectionHref("overview")}>overview</a>
+          <a href={sectionHref("roadmap")}>roadmap</a>
+          <a href={sectionHref("modules")}>modules</a>
+          <a href={sectionHref("modules")} className="nav-cta">
             start_learning()
           </a>
         </nav>

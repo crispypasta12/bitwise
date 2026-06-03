@@ -93,7 +93,7 @@ export default function Roadmap() {
     <section className="block wrap" id="roadmap" style={{ paddingTop: 0 }}>
       <div className="section-head reveal">
         <div className="section-tag mono">
-          <span className="cmt">// </span>learning_path.map
+          <span className="cmt">{"// "}</span>learning_path.map
         </div>
         <h2>Five tiers, built to compound.</h2>
         <p>

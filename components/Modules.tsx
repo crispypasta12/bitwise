@@ -1,17 +1,29 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const MODULES = [
+  {
+    num: "00",
+    file: "what_is_this_course_about",
+    ext: ".md",
+    tier: "Orientation",
+    title: "What Is This Course About?",
+    desc: "The map before the forest: what programming, software, hardware, systems, and engineering roles mean.",
+    time: "20-30 min",
+    status: "published",
+    href: "/modules/what-is-this-course-about",
+  },
   {
     num: "01",
     file: "history_of_programming",
     ext: ".md",
     tier: "Foundations",
     title: "A Short History of Programming",
-    desc: "From punch cards and assembly to modern toolchains — and why that lineage still shapes the code you write today.",
-    time: "25 min",
+    desc: "From mechanical computation and punch cards to modern systems, and why abstraction keeps increasing.",
+    time: "25-35 min",
     status: "published",
+    href: "/modules/short-history-of-programming",
   },
   {
     num: "02",
@@ -83,6 +95,7 @@ const STATUS_COUNTS = {
 
 const COMPILE_LINES = [
   { html: '<span style="color:var(--accent)">→</span> tier 01 · foundations', state: "ok" },
+  { html: "&nbsp;&nbsp;module 00 · what_is_this_course_about", state: "ok" },
   { html: "&nbsp;&nbsp;module 01 · history_of_programming", state: "ok" },
   { html: "&nbsp;&nbsp;module 02 · how_computers_work", state: "ok" },
   { html: "&nbsp;&nbsp;module 03 · source_to_binary", state: "ok" },
@@ -132,7 +145,7 @@ function CompileBar() {
     if (!box || !log || !seg || !pct) return;
 
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const target = Math.round((3 / 7) * 100);
+    const target = Math.round((4 / 8) * 100);
     const timers: ReturnType<typeof setTimeout>[] = [];
     let live = true;
 
@@ -230,7 +243,7 @@ export default function Modules() {
     <section className="block wrap" id="modules">
       <div className="section-head reveal">
         <div className="section-tag mono">
-          <span className="cmt">// </span>modules/
+          <span className="cmt">{"// "}</span>modules/
         </div>
         <h2>The module library.</h2>
         <p>
@@ -289,7 +302,11 @@ export default function Modules() {
                   <span className="time">
                     <ClockIcon /> {m.time}
                   </span>
-                  {m.status === "published" ? (
+                  {m.status === "published" && "href" in m ? (
+                    <a href={m.href} className="card-cta mono" aria-label={`Open ${m.title}`}>
+                      open <ArrowIcon />
+                    </a>
+                  ) : m.status === "published" ? (
                     <span className="card-cta mono">
                       open <ArrowIcon />
                     </span>

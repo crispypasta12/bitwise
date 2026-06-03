@@ -1,10 +1,20 @@
-export default function Footer() {
+type FooterProps = {
+  brandHref?: string;
+  sectionPrefix?: string;
+};
+
+export default function Footer({
+  brandHref = "#top",
+  sectionPrefix = "",
+}: FooterProps) {
+  const sectionHref = (id: string) => `${sectionPrefix}#${id}`;
+
   return (
     <footer>
       <div className="wrap">
         <div className="foot-grid">
           <div className="foot-brand">
-            <a className="brand" href="#top">
+            <a className="brand" href={brandHref}>
               <span className="logo mono">&amp;</span>
               <span>
                 <b>bit</b>
@@ -18,15 +28,15 @@ export default function Footer() {
           </div>
           <div className="foot-col">
             <h4>Course</h4>
-            <a href="#overview">Overview</a>
-            <a href="#roadmap">Roadmap</a>
-            <a href="#modules">Modules</a>
+            <a href={sectionHref("overview")}>Overview</a>
+            <a href={sectionHref("roadmap")}>Roadmap</a>
+            <a href={sectionHref("modules")}>Modules</a>
           </div>
           <div className="foot-col">
             <h4>Tiers</h4>
-            <a href="#roadmap">Foundations</a>
-            <a href="#roadmap">Languages</a>
-            <a href="#roadmap">Systems &amp; Embedded</a>
+            <a href={sectionHref("roadmap")}>Foundations</a>
+            <a href={sectionHref("roadmap")}>Languages</a>
+            <a href={sectionHref("roadmap")}>Systems &amp; Embedded</a>
           </div>
         </div>
         <div className="foot-prompt mono">

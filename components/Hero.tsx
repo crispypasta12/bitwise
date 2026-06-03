@@ -31,7 +31,7 @@ export default function Hero() {
           <div className="hero-stats reveal d3">
             <div className="stat">
               <div className="n mono">
-                <span className="accent">3</span>/7
+                <span className="accent">4</span>/8
               </div>
               <div className="l mono">MODULES LIVE</div>
             </div>

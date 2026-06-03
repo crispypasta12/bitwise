@@ -3,7 +3,7 @@ export default function Overview() {
     <section className="block wrap" id="overview">
       <div className="section-head reveal">
         <div className="section-tag mono">
-          <span className="cmt">// </span>the_curriculum
+          <span className="cmt">{"// "}</span>the_curriculum
         </div>
         <h2>One path. First principles, all the way up.</h2>
         <p>
