@@ -818,9 +818,9 @@ export default function ModuleThreePage() {
               <Link href="/modules/how-a-computer-actually-works" className="btn btn-ghost">
                 Previous: Module 2
               </Link>
-              <button className="btn btn-disabled" disabled>
+              <Link href="/modules/universal-programming-concepts" className="btn btn-primary">
                 Next: Module 4
-              </button>
+              </Link>
             </div>
           </div>
         </section>

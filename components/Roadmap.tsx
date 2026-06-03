@@ -8,7 +8,7 @@ const tiers = [
     mods: ["done", "done", "done"],
     modLabel: "3 / 3",
     active: true,
-    current: true,
+    current: false,
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" aria-hidden="true">
         <path d="M12 3 3 7.5 12 12l9-4.5L12 3Z"/>
@@ -21,12 +21,12 @@ const tiers = [
     num: "02",
     status: "prog",
     statusLabel: "In progress",
-    name: "Languages",
-    desc: "Why so many languages exist, the families they fall into, and how to choose.",
-    mods: ["soon", "soon"],
-    modLabel: "2 soon",
+    name: "Programming Basics",
+    desc: "Universal concepts, beginner data structures, and the ideas that transfer across languages.",
+    mods: ["done", "soon"],
+    modLabel: "1 / 2",
     active: true,
-    current: false,
+    current: true,
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M8 6 3 12l5 6"/>
